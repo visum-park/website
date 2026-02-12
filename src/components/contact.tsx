@@ -21,11 +21,25 @@ const Contact = () => {
           Contact Us
         </h2>
         <div className="flex flex-col justify-center gap-6 text-gray-300 mb-6">
-          <p className="flex items-center gap-2 justify-center">
-            <Phone size={16} /> +254 712 345 678
+          <p className="flex flex-col sm:flex-row items-center gap-2 justify-center text-center">
+            <Phone size={16} />
+
+            <a
+              href="tel:+254727737733"
+              className="hover:text-[#BC9F64] transition">
+              +254 727 737 733
+            </a>
+
+            <span className="hidden sm:inline">|</span>
+
+            <a
+              href="tel:+254740926266"
+              className="hover:text-[#BC9F64] transition">
+              +254 740 926 266
+            </a>
           </p>
           <p className="flex items-center gap-2 justify-center">
-            <Mail size={16} /> info@visumparkhotel.com
+            <Mail size={16} /> info@visumpark.com
           </p>
           <div className="flex justify-center items-center gap-3 text-lg">
             <MapPin size={20} />{" "}

@@ -3,10 +3,10 @@ import BrandLogo from "../assets/brand.png";
 
 export default function HotelLandingPage() {
   return (
-    <div className="min-h-screen bg-white text-gray-800">
+    <div className="text-gray-800 mx-auto px-4">
       {/* Hero */}
       <section className="relative py-4 flex items-center justify-center text-center px-6 md:px-0">
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0" />
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -22,7 +22,7 @@ export default function HotelLandingPage() {
       <img
         src={BrandLogo}
         alt={"Brand"}
-        className="mx-auto object-cover shadow-lg border border-white"
+        className="mx-auto object-cover shadow-lg rounded border border-white"
       />
     </div>
   );

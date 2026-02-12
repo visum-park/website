@@ -45,7 +45,7 @@ const Contact = () => {
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 h-10 rounded-full bg-gray-800 hover:bg-amber-600 transition flex items-center justify-center">
+            className="p-3 h-10 rounded-full bg-gray-800 hover:bg-[#BC9F64] transition flex items-center justify-center">
             <Icon size={20} />
           </a>
         ))}

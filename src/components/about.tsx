@@ -49,7 +49,7 @@ const AboutAnimatedSmooth = () => {
         className="bg-[#BC9F64] text-black p-8 rounded-xl shadow-lg border-l-4 border-[#2D4B37]">
         <h3 className="text-2xl md:text-3xl font-semibold mb-4">
           Who we are
-          <span className="text-amber-600">🌟</span>
+          <span className="text-[#BC9F64]">🌟</span>
         </h3>
         <p className="text-lg leading-relaxed">
           Visum Park Hotel is a beautiful boutique hotel located in Machakos
@@ -67,7 +67,7 @@ const AboutAnimatedSmooth = () => {
         variants={item}
         className="bg-[#BC9F64] text-black p-8 rounded-xl shadow-lg border-l-4 border-[#2D4B37]">
         <h3 className="text-2xl md:text-3xl font-semibold mb-4">
-          Vision <span className="text-amber-600">🌟</span>
+          Vision <span className="text-[#BC9F64]">🌟</span>
         </h3>
         <p className="text-lg leading-relaxed">
           To be accepted as the leader in the hotel industry and provide the
@@ -84,7 +84,7 @@ const AboutAnimatedSmooth = () => {
         variants={item}
         className="bg-[#BC9F64] text-black p-8 rounded-xl shadow-lg border-l-4 border-[#2D4B37]">
         <h3 className="text-2xl md:text-3xl font-semibold mb-4">
-          Mission <span className="text-amber-600">🎯</span>
+          Mission <span className="text-[#BC9F64]">🎯</span>
         </h3>
         <p className="text-lg leading-relaxed">
           Our mission is to deliver top-level hospitality services that satisfy

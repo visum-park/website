@@ -1,12 +1,14 @@
 import { motion } from "motion/react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
+const APP_URL = import.meta.env.VITE_APP_URL;
 interface FacilityCardProps {
   title: string;
   imageSrc: string;
   delay: number;
   darkMode: boolean;
   className?: string;
+  url: string;
 }
 
 export function FacilityCard({
@@ -14,6 +16,7 @@ export function FacilityCard({
   imageSrc,
   delay,
   darkMode,
+  url,
   className = "",
 }: FacilityCardProps) {
   return (
@@ -47,11 +50,13 @@ export function FacilityCard({
 
       {/* Image at the bottom */}
       <div className="h-64 overflow-hidden mx-6 mb-3 rounded-3xl mt-auto">
-        <ImageWithFallback
-          src={imageSrc}
-          alt={title}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-        />
+        <a href={`${APP_URL}/${url}`} target="_blank">
+          <ImageWithFallback
+            src={imageSrc}
+            alt={title}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+        </a>
       </div>
     </motion.div>
   );

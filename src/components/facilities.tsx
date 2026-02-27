@@ -47,24 +47,28 @@ const Facilities = () => {
             imageSrc={ConferenceHallImage}
             delay={0.1}
             darkMode={darkMode}
+            url="conference-halls"
           />
           <FacilityCard
             title="Accommodation"
             imageSrc={BedFrontView}
             delay={0.2}
             darkMode={darkMode}
+            url="accommodation"
           />
           <FacilityCard
             title="Restaurant"
             imageSrc={RestaurantImage}
             delay={0.3}
             darkMode={darkMode}
+            url="restaurant"
           />
           <FacilityCard
             title="Team-Building Garden"
             imageSrc={TeamBuildingGardenImage}
             delay={0.4}
             darkMode={darkMode}
+            url="team-building"
           />
           <FacilityCard
             title="Kids' Playgrounds"
@@ -72,6 +76,7 @@ const Facilities = () => {
             delay={0.5}
             darkMode={darkMode}
             className="md:col-span-2 lg:col-span-1"
+            url="kids-playground"
           />
         </div>
       </div>

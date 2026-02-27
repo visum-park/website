@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 // Assets
 import BedFrontView from "../assets/accomodation/bed/front_view1.jpg";
-import ConferenceImage from "../assets/conference/conference.jpg";
-import TeamBuildingGardenImage from "../assets/images/team-building-garden.jpg";
+import ConferenceHallImage from "../assets/conference/conferenceHall.jpeg";
 import RestaurantImage from "../assets/restaurant/table.jpg";
+import TeamBuildingGardenImage from "../assets/team-building/teamBuildingGarden.jpg";
 
 import { useTheme } from "../context/ThemeContext";
 import { FacilityCard } from "./FacilityCard";
@@ -44,7 +44,7 @@ const Facilities = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <FacilityCard
             title="Conference Halls"
-            imageSrc={ConferenceImage}
+            imageSrc={ConferenceHallImage}
             delay={0.1}
             darkMode={darkMode}
           />

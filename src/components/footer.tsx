@@ -120,7 +120,7 @@ const Footer = () => {
               Email
             </h3>
             <p className="text-white">
-              info@visumparkhotels.com
+              visumparkhotel@yahoo.com
               <br />
             </p>
           </motion.div>

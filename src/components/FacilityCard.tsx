@@ -50,7 +50,7 @@ export function FacilityCard({
 
       {/* Image at the bottom */}
       <div className="h-64 overflow-hidden mx-6 mb-3 rounded-3xl mt-auto">
-        <a href={`${APP_URL}/${url}`} target="_blank">
+        <a href={`${APP_URL}/${url}`}>
           <ImageWithFallback
             src={imageSrc}
             alt={title}

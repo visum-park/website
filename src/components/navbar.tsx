@@ -17,6 +17,10 @@ export default function Navbar() {
       name: "Kid's Playground",
       path: `${APP_URL}/kids-playground`,
     },
+    {
+      name: "Work With Us",
+      path: `${APP_URL}/careers`,
+    },
   ];
 
   return (

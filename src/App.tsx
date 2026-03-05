@@ -6,6 +6,8 @@ import Hero from "./components/hero";
 import { useLocalStorageState } from "./hooks/useLocalStorageState";
 
 import Footer from "./components/footer";
+import HiringBanner from "./components/HiringBanner";
+import JobAdvertToast from "./components/JobAdverToast";
 import Navbar from "./components/navbar";
 import { WhatsAppFloatingButton } from "./components/WhatsAppFloatingButton";
 import { ThemeContext } from "./context/ThemeContext";
@@ -23,6 +25,8 @@ export default function App() {
         className="min-h-screen"
         style={{ backgroundColor: darkMode ? "#0f1419" : "#ffffff" }}>
         <Navbar />
+        <HiringBanner />
+        <JobAdvertToast />
         {/* Dark Mode Toggle Button */}
         <motion.button
           initial={{ opacity: 0, scale: 0 }}

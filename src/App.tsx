@@ -6,6 +6,7 @@ import Hero from "./components/hero";
 import { useLocalStorageState } from "./hooks/useLocalStorageState";
 
 import Footer from "./components/footer";
+import Navbar from "./components/navbar";
 import { WhatsAppFloatingButton } from "./components/WhatsAppFloatingButton";
 import { ThemeContext } from "./context/ThemeContext";
 
@@ -21,6 +22,7 @@ export default function App() {
       <div
         className="min-h-screen"
         style={{ backgroundColor: darkMode ? "#0f1419" : "#ffffff" }}>
+        <Navbar />
         {/* Dark Mode Toggle Button */}
         <motion.button
           initial={{ opacity: 0, scale: 0 }}
@@ -29,7 +31,7 @@ export default function App() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setDarkMode((prev: boolean) => !prev)}
-          className="fixed cursor-pointer top-6 right-6 z-50 p-4 rounded-full shadow-lg transition-all"
+          className="fixed cursor-pointer top-18 right-6 z-50 p-4 rounded-full shadow-lg transition-all"
           style={{
             backgroundColor: darkMode ? "#BC9F64" : "#2D4B37",
             boxShadow: darkMode

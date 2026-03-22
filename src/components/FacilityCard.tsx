@@ -6,7 +6,7 @@ const APP_URL = import.meta.env.VITE_APP_URL;
 interface FacilityCardProps {
   title: string;
   imageSrc: string;
-  delay: number;
+  delay?: number;
   className?: string;
   url: string;
 }
@@ -14,7 +14,7 @@ interface FacilityCardProps {
 export function FacilityCard({
   title,
   imageSrc,
-  delay,
+  delay = 0,
   url,
   className = "",
 }: FacilityCardProps) {

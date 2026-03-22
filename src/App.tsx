@@ -5,6 +5,7 @@ import Facilities from "./components/facilities";
 import Hero from "./components/hero";
 import { useLocalStorageState } from "./hooks/useLocalStorageState";
 
+import { Helmet } from "react-helmet-async";
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
 import { WhatsAppFloatingButton } from "./components/WhatsAppFloatingButton";
@@ -19,6 +20,25 @@ export default function App() {
         darkMode,
         toggleDarkMode: () => setDarkMode((prev) => !prev),
       }}>
+      <Helmet>
+        <title>Visum Park Hotel | Luxury Stay & Comfort</title>
+        <meta
+          name="description"
+          content="Experience comfort, luxury, and exceptional hospitality at Visum Park Hotel - Machakos. Book your stay today."
+        />
+        <meta
+          name="keywords"
+          content="hotel, accommodation, luxury hotel, Kenya hotel, Machakos"
+        />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Visum Park Hotel - Machakos" />
+        <meta
+          property="og:description"
+          content="Luxury stay and hospitality experience in Machakos."
+        />
+        <meta property="og:image" content="/hotel-preview.png" />
+      </Helmet>
       <div
         className="min-h-screen"
         style={{ backgroundColor: darkMode ? "#0f1419" : "#ffffff" }}>

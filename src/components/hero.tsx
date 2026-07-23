@@ -1,6 +1,6 @@
 import { ChevronDown } from "lucide-react";
 import { motion } from "motion/react";
-import Brand from "../assets/brand.png";
+import Brand from "../assets/brand.jpg";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 const Hero = () => {

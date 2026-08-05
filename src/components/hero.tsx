@@ -1,24 +1,54 @@
+import { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import Brand from "../assets/brand.jpg";
+import BrandNight from "../assets/brand-night.jpg";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 const Hero = () => {
+  const images = [Brand, BrandNight];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    // Switch image every 5 seconds (5000ms)
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const scrollToAbout = () => {
     document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
   };
+
   return (
     <section className="relative h-screen w-full overflow-hidden">
+      {/* Background Images with Crossfade Transition */}
       <div className="absolute inset-0">
-        <ImageWithFallback
-          src={Brand}
-          alt="Visum Park Hotel"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
+        <AnimatePresence mode="popLayout">
+          <motion.div
+            key={currentImageIndex}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 2.0, ease: "easeInOut" }}
+            className="absolute inset-0 w-full h-full"
+          >
+            <ImageWithFallback
+              src={images[currentImageIndex]}
+              alt="Visum Park Hotel"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60 z-10"></div>
       </div>
 
-      <div className="relative h-full flex flex-col items-center justify-center text-white px-4">
+      {/* Hero Content */}
+      <div className="relative z-20 h-full flex flex-col items-center justify-center text-white px-4">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -27,7 +57,8 @@ const Hero = () => {
           style={{
             fontWeight: 600,
             textShadow: "0 4px 20px rgba(188, 159, 100, 0.3)",
-          }}>
+          }}
+        >
           Visum Park Hotels
         </motion.h1>
         <motion.p
@@ -38,7 +69,8 @@ const Hero = () => {
           style={{
             color: "#BC9F64",
             textShadow: "0 2px 10px rgba(0, 0, 0, 0.5)",
-          }}>
+          }}
+        >
           Experience Luxury in the Heart of Machakos
         </motion.p>
         <motion.button
@@ -54,7 +86,8 @@ const Hero = () => {
           style={{
             borderColor: "#BC9F64",
             boxShadow: "0 0 15px rgba(188, 159, 100, 0.3)",
-          }}>
+          }}
+        >
           Discover More
           <ChevronDown className="w-5 h-5" />
         </motion.button>

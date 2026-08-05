@@ -9,6 +9,7 @@ import Footer from "./components/footer";
 import Navbar from "./components/navbar";
 import { WhatsAppFloatingButton } from "./components/WhatsAppFloatingButton";
 import { ThemeContext } from "./context/ThemeContext";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   const [darkMode, setDarkMode] = useLocalStorageState("darkMode", false);
@@ -53,6 +54,7 @@ export default function App() {
         {/* Contact Footer */}
         <Footer />
         <WhatsAppFloatingButton />
+        <Analytics />
       </div>
     </ThemeContext.Provider>
   );
